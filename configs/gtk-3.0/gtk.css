@@ -1,0 +1,148 @@
+/* =========================================================================
+   RETRO MONOCHROME PIXEL STATION - COMPLETE GTK3 OVERRIDE (BEIGE DIALOGS)
+   ========================================================================= */
+
+/* Typography & Global Sharp Layouts */
+* {
+  font-size: 18px;
+  border-radius: 0px;
+  box-shadow: none;
+  -gtk-icon-style: regular;
+}
+
+/* Force icons to scale cleanly without anti-aliasing fuzz */
+image, GtkImage {
+  -gtk-icon-transform: scale(0.85);
+}
+
+/* 1. Main Window Viewport & File Canvas Grid (Dark Charcoal) */
+window,
+thunar-window,
+thunar-view,
+thunar-icon-view,
+thunar-details-view,
+.view,
+viewport {
+  background-color: #1c1c1c; /* Dark Charcoal[cite: 1] */
+  color: #f5f5dc; /* Soft Warm Beige[cite: 1] */
+}
+
+/* 2. Sidebars & Left Trees (Medium Graphite) */
+.sidebar,
+thunar-shortcuts-view,
+thunar-tree-view,
+treeview {
+  background-color: #2a2a2a; /* Medium Graphite[cite: 1] */
+  color: #f5f5dc; /* Soft Warm Beige[cite: 1] */
+  border-right: 1px solid #1c1c1c; /* Dark Charcoal[cite: 1] */
+}
+
+/* 3. Grid Selection & Row Highlights (Sky Blue Accent) */
+.view:selected,
+.view:hover,
+treeview:selected,
+treeview:hover {
+  background-color: #87ceeb; /* Sky Blue[cite: 1] */
+  color: #1c1c1c; /* Dark Charcoal[cite: 1] */
+}
+
+/* 4. TOP BAR & CURRENT ADDRESS TOOLBARS */
+.toolbar,
+#location-toolbar,
+#location-toolbar box,
+menubar {
+  background-color: #2a2a2a; /* Medium Graphite[cite: 1] */
+  color: #f5f5dc; /* Soft Warm Beige[cite: 1] */
+  border-bottom: 1px solid #1c1c1c; /* Dark Charcoal[cite: 1] */
+}
+
+/* Path Bar Mode (Breadcrumb Buttons) */
+.path-bar button {
+  background-color: #2a2a2a; /* Medium Graphite[cite: 1] */
+  color: #b19cd9; /* Pastel Purple address text[cite: 1] */
+  border: none;
+  padding: 4px 6px;
+}
+
+.path-bar button:checked {
+  background-color: #1c1c1c; /* Dark Charcoal[cite: 1] */
+  color: #87ceeb; /* Active Directory glows Sky Blue[cite: 1] */
+}
+
+.path-bar button:hover {
+  background-color: #87ceeb; /* Sky Blue[cite: 1] */
+  color: #1c1c1c; /* Dark Charcoal[cite: 1] */
+}
+
+/* Manual Edit Mode (Ctrl+L Address Line Input) */
+#location-toolbar entry,
+.location-entry entry,
+entry {
+  background-color: #1c1c1c; /* Dark Charcoal[cite: 1] */
+  color: #b19cd9; /* Pastel Purple address text[cite: 1] */
+  border: 1px solid #1c1c1c; /* Dark Charcoal[cite: 1] */
+  padding: 4px;
+}
+
+/* File Column Headers */
+button, header {
+  background-color: #2a2a2a; /* Medium Graphite[cite: 1] */
+  color: #f5f5dc; /* Soft Warm Beige[cite: 1] */
+  border: 1px solid #1c1c1c; /* Dark Charcoal[cite: 1] */
+}
+
+/* 5. SYSTEM DIALOGS, POPOVERS & MENUS (FAIL-PROOF BEIGE OVERRIDE) */
+dialog,
+messagedialog,
+filechooser,
+.filechooser,
+.solid-csd,
+.dialog-action-area,
+.dialog-action-box {
+  background-color: #f5f5dc; /* Soft Warm Beige[cite: 1] */
+  color: #1c1c1c; /* Dark Charcoal[cite: 1] */
+  border: 2px solid #2a2a2a; /* Medium Graphite[cite: 1] */
+}
+
+dialog label,
+messagedialog label,
+filechooser label,
+.filechooser label,
+dialog entry,
+filechooser entry {
+  background-color: #f5f5dc; /* Soft Warm Beige[cite: 1] */
+  color: #1c1c1c; /* Dark Charcoal[cite: 1] */
+}
+
+dialog button,
+filechooser button {
+  background-color: #2a2a2a; /* Medium Graphite[cite: 1] */
+  color: #f5f5dc; /* Soft Warm Beige[cite: 1] */
+  border: 1px solid #1c1c1c; /* Dark Charcoal[cite: 1] */
+}
+
+dialog button:hover,
+filechooser button:hover {
+  background-color: #87ceeb; /* Sky Blue[cite: 1] */
+  color: #1c1c1c; /* Dark Charcoal[cite: 1] */
+}
+
+/* Context Menus (Right-click) and Dropdowns */
+menu, 
+.menu, 
+popover, 
+.popover {
+  background-color: #f5f5dc; /* Soft Warm Beige[cite: 1] */
+  color: #1c1c1c; /* Dark Charcoal[cite: 1] */
+  border: 2px solid #2a2a2a; /* Medium Graphite[cite: 1] */
+}
+
+menuitem {
+  color: #1c1c1c; /* Dark Charcoal[cite: 1] */
+}
+
+menuitem:hover,
+menuitem:selected {
+  background-color: #87ceeb; /* Sky Blue[cite: 1] */
+  color: #1c1c1c; /* Dark Charcoal[cite: 1] */
+}

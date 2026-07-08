@@ -1,0 +1,10 @@
+{
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmPasteNative": false,
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'monospace'",
+    "editor.fontSize": 16,
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
+    "window.titleBarStyle": "custom"
+}

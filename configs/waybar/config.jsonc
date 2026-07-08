@@ -1,0 +1,49 @@
+{
+    "output": "DP-2",
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "spacing": 0,
+    "modules-left": ["hyprland/workspaces", "custom/separator", "custom/spotify"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["cpu", "memory", "clock", "custom/notifications"],
+
+    "custom/spotify": {
+        "format": "PLAYING: [ {} ]",
+        "escape": true,
+        "return-type": "json",
+        "max-length": 45,
+        "exec": "playerctl --player=spotify metadata --format '{\"text\": \"{{artist}} - {{title}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' --follow",
+        "on-click": "playerctl play-pause"
+    },
+
+    "hyprland/window": {
+        "format": "=> {title}",
+        "max-length": 40
+    },
+
+    "cpu": {
+        "interval": 2,
+        "format": "CPU: {usage}% {icon}",
+        "format-icons": ["░░░░", "█░░░", "██░░", "███░", "████"]
+    },
+
+    "memory": {
+        "interval": 2,
+        "format": "RAM: {percentage}% {icon}",
+        "format-icons": ["░░░░", "█░░░", "██░░", "███░", "████"]
+    },
+
+    "clock": {
+        "interval": 1,
+        /* This bracket format forces Waybar to print the time without breaking on raw % characters */
+        "format": "TIME: [ {:%Y-%m-%d | %H:%M:%S} ]"
+    },
+
+    "custom/notifications": {
+        "exec": "~/.local/bin/notifications.sh",
+        "interval": 2,
+        "return-type": "plain",
+        "on-click": "makoctl history -j | jq -r '.data[0][] | \"[\" + .[\"app-name\"].value + \"] \" + .summary.value' | fuzzel --dmenu --prompt='NOTIF HISTORY  ' --anchor='center' --width=50 --lines=10 -b '1c1c1cf0' -t 'f5f5dcff' -s 'f5f5dcff' -S '1c1c1cff' -m '87ceebff' -C '2a2a2aff' --font='Scientifica:size=14'"
+    }
+}

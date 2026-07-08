@@ -1,0 +1,22 @@
+[general]
+# Adjust the refresh pacing for a fluid frame rate
+framerate = 60
+# Number of bouncing audio bars to render
+bars = 16
+
+[input]
+# Tell CAVA to listen to your default PipeWire system audio engine
+method = pipewire
+source = auto
+
+[output]
+# Use solid retro text box characters for the equalizer blocks
+data_format = ascii
+ascii_max_range = 7
+
+[color]
+# Set the background to transparent so it blends into your Kitty window color
+background = default
+
+# Force the visualizer bars to match your exact beige-white layout color
+foreground = '#f5f5dc'

@@ -1,0 +1,37 @@
+# --- THE METRIC PALETTE (RETRO MONOCHROME) ---
+set default-bg                  "#1c1c1c" # Canvas: Dark Charcoal
+set default-fg                  "#f5f5dc" # Text Primary: Soft Warm Beige
+
+set statusbar-bg                "#2a2a2a" # Panel: Medium Graphite
+set statusbar-fg                "#f5f5dc" # Text Primary
+
+set inputbar-bg                 "#2a2a2a" # Panel
+set inputbar-fg                 "#87ceeb" # Accent Pastel: Sky Blue
+
+set notification-bg             "#2a2a2a"
+set notification-fg             "#ffb7c5" # Alert Stack: Pastel Pink
+
+set notification-error-bg       "#2a2a2a"
+set notification-error-fg       "#ffb7c5"
+
+set notification-warning-bg     "#2a2a2a"
+set notification-warning-fg     "#b19cd9" # Accent Sub: Pastel Purple
+
+set highlight-color             "#b19cd9" # Selection highlight
+set highlight-active-color      "#87ceeb"
+
+# --- DOCUMENT RENDERING RULE ---
+set recolor                     "false"   # Native white pages / black text preserved
+
+# --- WINDOW & GEOMETRY METRICS ---
+set guioptions                  "s"       # Show clean statusbar panel at the bottom
+set statusbar-home-tilde        "false"
+set window-title-home-tilde     "false"
+
+# --- TYPOGRAPHY ENGINE TARGET ---
+# Updated to leverage your secondary high-density bitmap grid font
+set font                        "Scientifica 14" 
+
+# --- WORKFLOW ADJUSTMENTS ---
+set scroll-step                 40
+set page-store-threshold        5

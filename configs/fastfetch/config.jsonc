@@ -1,0 +1,43 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    //TODO change to your user
+    "source": "/home/.../Pictures/nixos-ascii.png",
+    "type": "kitty",
+    "width": 18,
+    "height": 10,
+    "padding": {
+      "top": 1,
+      "left": 1,
+      "right": 3
+    }
+  },
+  "display": {
+    "separator": " ",
+    "color": {
+      // Binds all module keys globally to #b19cd9 (Pastel Purple)
+      "keys": "38;2;177;156;217", 
+      // Binds all values globally to #f5f5dc (Soft Warm Beige)
+      "output": "37" 
+    }
+  },
+  "modules": [
+    {
+      "type": "title",
+      //TODO change xxx (middle of line) to your username and yyy (end of line) to your hostname
+      "format": "\u001b[38;2;135;206;235mxxx\u001b[37m@\u001b[38;2;177;156;217myyy"
+    },
+    "break",
+    { "type": "os",       "key": "os " },
+    { "type": "kernel",   "key": "ker", "format": "{2}" }, 
+    { "type": "uptime",   "key": "upt" },
+    {
+      "type": "packages",
+      "key": "pkg",
+      "format": "{1} (nix)" 
+    },
+    { "type": "shell",    "key": "sh " },
+    { "type": "wm",       "key": "wm " },
+    { "type": "terminal", "key": "trm" }
+  ]
+}

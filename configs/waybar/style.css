@@ -1,0 +1,40 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 16px; /* Core 1:1 pixel rendering bounding box for Cozette */
+    font-weight: normal;
+    border-radius: 0;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+window#waybar {
+    background-color: #1c1c1c;
+    color: #f5f5dc;
+    border-bottom: 2px solid #2a2a2a;
+}
+
+#custom-spotify {
+    color: #ffb7c5;
+    padding-left: 8px;
+}
+
+#window {
+    color: #a0a0a0;
+}
+
+#cpu, #memory {
+    background-color: #2a2a2a;
+    color: #f5f5dc;
+    margin: 2px 2px;
+    padding: 0 6px;
+    border: 1px solid #4a4a4a;
+    /* Crucial: 0px tracking forces the block icons to snap together into a continuous bar! */
+    letter-spacing: 0px; 
+}
+
+#clock {
+    color: #1c1c1c;
+    background-color: #f5f5dc;
+    margin: 2px 4px 2px 8px;
+    padding: 0 8px;
+}

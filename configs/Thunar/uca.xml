@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+  <action>
+    <icon>utilities-terminal</icon>
+    <name>Open Kitty Here</name>
+    <unique-id>1-kitty-here</unique-id>
+    <command>kitty --directory %f</command>
+    <description>Open terminal emulator in current folder</description>
+    <patterns>*</patterns>
+    <directories/>
+  </action>
+</actions>
