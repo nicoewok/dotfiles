@@ -1,9 +1,10 @@
 # /etc/nixos/developer.nix
 { pkgs, ... }: {
-
   environment = {
   	variables = {
 	    PKG_CONFIG_PATH = "/run/current-system/sw/lib/pkgconfig";
+	    MAMBA_ROOT_PREFIX = "/home/nicolang/.mamba";
+	    MAMBA_EXE = "${pkgs.micromamba}/bin/micromamba";
 	};	
 	shellAliases = {
 		dev-edit = "sudo micro /etc/nixos/dev.nix";
@@ -20,7 +21,8 @@
 	
 	    # Runtimes & Compilers
 	    python3
-	    conda
+	    python3Packages.pip
+	    micromamba
 	    nodejs_22
 	    go
 	    jdk21
@@ -42,6 +44,16 @@
 	    docker-compose
 	    efibootmgr
 	  ];
+  };
+
+  #For Conda
+  programs.bash.interactiveShellInit =
+  ''
+      eval "$($MAMBA_EXE shell hook -s bash)"
+  '';
+  programs.direnv = {
+      enable = true;
+      nix-direnv.enable = true;
   };
 
   # ┌─ NIX-LD COMPATIBILITY LAYER ─┐
