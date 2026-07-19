@@ -44,11 +44,6 @@
     packages = with pkgs; [
       scientifica
       nerd-fonts.jetbrains-mono
-
-      noto-fonts
-      noto-fonts-color-emoji
-      noto-fonts-cjk-sans
-      corefonts
     ];
     fontconfig = {
       enable = true;
@@ -56,12 +51,6 @@
       useEmbeddedBitmaps = false;
       hinting.enable = true;
       antialias = true;
-      defaultFonts = {
-              monospace = [ "scientifica" "JetBrainsMono Nerd Font" "Noto Sans Mono" ];
-              sansSerif = [ "Noto Sans" ];
-              serif     = [ "Noto Serif" ];
-              emoji     = [ "Noto Color Emoji" ];
-            };
     };
     fontDir.enable = true;
   };
